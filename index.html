@@ -1,158 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farooq | Developer Portfolio</title>
 
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-[#0B0F17] text-slate-200 antialiased selection:bg-blue-500 selection:text-white min-h-screen">
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <h3 class="logo">MyPortfolio</h3>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HOME -->
-<header id="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Computer Science Student and Aspiring Developer</p>
-</header>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        My name is Umer, and I am a Computer Science student with a strong interest in learning and growing in the field of technology. I am motivated by curiosity and a desire to improve myself through consistent effort.
-
-I have completed courses such as 2D and 3D Drafting using AutoCAD and JavaScript Essentials , which have helped me develop practical skills, logical thinking, and a structured approach to problem-solving. Alongside my technical learning, I am currently pursuing courses in Digital Literacy and Creative Writing to strengthen my communication skills and broaden my overall understanding.
-
-I consider myself a dedicated and responsible student who values continuous learning. I am always eager to explore new ideas, improve my abilities, and make the most of the opportunities available to me. I am also a team player and enjoy collaborating with others to achieve common goals. I believe that effective communication and teamwork are essential for success in any field, and I strive to cultivate these skills in all my endeavors.
-    </p>
-</section>
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill-box">JavaScript</div>
-        <div class="skill-box">AutoCAD</div>
-        <div class="skill-box">Critical Thinking</div>
-        <div class="skill-box">Time Management</div>
-        <div class="skill-box">Team Work</div>
-        <div class="skill-box">MS Office & Excel</div>
-        <div class="skill-box">Project Management</div>
-        <div class="skill-box">Communication Skills</div>
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#0B0F17]/80 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+        Umer Farooq<span class="text-blue-500">.dev</span>
+      </a>
+      <nav class="flex items-center space-x-6 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#projects" class="text-white hover:text-blue-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
     </div>
-</section>
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="slider">
-        <div class="slides">
-            <img src="wr1.png" alt="Project 1">
-            <img src="wr2.png" alt="Project 2">
-            <img src="wr3.png" alt="Project 3">
-        </div>
+  </header>
+   <!-- ================= HERO SECTION ================= -->
+  <section id="about" class="pt-36 pb-16 px-6 max-w-6xl mx-auto">
+    <div class="space-y-4 max-w-2xl">
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+        Frontend Developer & CS Undergrad
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+        Hi, I'm Umer Farooq. <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+          Building responsive & modern web apps.
+        </span>
+      </h1>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Focused on crafting clean user interfaces with HTML, Tailwind CSS, JavaScript, and React. Passionate about problem-solving and writing maintainable code.
+      </p>
     </div>
-</section>
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: uf5757519@gmail.com</p>
-<p>GitHub: <a href="https://github.com/umerfarooq0320" target="_blank">github.com/umerfarooq0320</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/umer-farooq-694149383/" target="_blank">linkedin.com/in/umerfarooq-694149383/</a></p>
-</section>
-
-<footer>
-    © 2025| My Portfolio
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <h3 class="logo">MyPortfolio</h3>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HOME -->
-<header id="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Computer Science Student and Aspiring Developer</p>
-</header>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        My name is Uz, and I am a Computer Science student with a strong interest in learning and growing in the field of technology. I am motivated by curiosity and a desire to improve myself through consistent effort.
-
-I have completed courses such as 2D and 3D Drafting using AutoCAD and JavaScript Essentials , which have helped me develop practical skills, logical thinking, and a structured approach to problem-solving. Alongside my technical learning, I am currently pursuing courses in Digital Literacy and Creative Writing to strengthen my communication skills and broaden my overall understanding.
-
-I consider myself a dedicated and responsible student who values continuous learning. I am always eager to explore new ideas, improve my abilities, and make the most of the opportunities available to me.
-    </p>
-</section>
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill-box">JavaScript</div>
-        <div class="skill-box">AutoCAD</div>
-        <div class="skill-box">Critical Thinking</div>
-        <div class="skill-box">Time Management</div>
-        <div class="skill-box">Team Work</div>
-        <div class="skill-box">MS Office & Excel</div>
-        <div class="skill-box">Project Management</div>
-        <div class="skill-box">Communication Skills</div>
+  </section>
+   <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects" class="py-16 px-6 max-w-6xl mx-auto border-t border-slate-800">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="text-blue-400 text-xs font-bold uppercase tracking-widest block mb-1">Featured Work</span>
+        <h2 class="text-3xl font-extrabold text-white">Selected Projects</h2>
+      </div>
+      <p class="text-slate-400 text-sm max-w-md">
+        Click on any project card to launch the live demo or view details.
+      </p>
     </div>
-</section>
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="slider">
-        <div class="slides">
-            <img src="wr1.png" alt="Project 1">
-            <img src="wr2.png" alt="Project 2">
-            <img src="wr3.png" alt="Project 3">
-        </div>
+
+    <!-- Cards Grid -->
+    <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Injected via JavaScript below -->
     </div>
-</section>
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: uf5757519@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/umerfarooq0320" target="_blank">github.com/umerfarooq0320</a></p>
-     <p>LinkedIn: <a href="https://www.linkedin.com/in/umer-farooq-694149383/" target="_blank">linkedin.com/in/umerfarooq</a></p>
-    
-</section>
-
-<footer>
-    © 2025| My Portfolio
-</footer>
-
-<script src="script.js"></script>
-</body>
-
-</html>
-
+  </section>
+  <!-- ================= CONTACT & FOOTER ================= -->
+  <footer id="contact" class="border-t border-slate-800 py-12 px-6 bg-[#090D14] mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h4 class="text-lg font-bold text-white">Let's Connect</h4>
+        <p class="text-xs text-slate-400 mt-1">Open for frontend roles and collaborative projects.</p>
+      </div>
+      <div class="flex items-center gap-6 text-sm font-semibold">
+        <a href="mailto:uf5757519@gmail.com" class="text-blue-400 hover:underline">
+          uf5757519@gmail.com
+        </a>
+        <a href="https://github.com/umerfarooq0320" target="_blank" class="text-slate-400 hover:text-white transition">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/umerfarooq" target="_blank" class="text-slate-400 hover:text-white transition">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+  
