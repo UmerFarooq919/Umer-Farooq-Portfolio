@@ -100,3 +100,41 @@ function renderProjects() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProjects);
+
+// --- Mobile Drawer ---
+function initMobileMenu() {
+  const menuBtn = document.getElementById("menu-btn");
+  const closeBtn = document.getElementById("close-btn");
+  const drawer = document.getElementById("mobile-drawer");
+  const overlay = document.getElementById("drawer-overlay");
+  const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+  function openMenu() {
+    overlay.classList.remove("hidden");
+    setTimeout(() => overlay.classList.remove("opacity-0"), 10);
+    drawer.classList.remove("translate-x-full");
+    document.body.classList.add("overflow-hidden");
+  }
+
+  function closeMenu() {
+    drawer.classList.add("translate-x-full");
+    overlay.classList.add("opacity-0");
+    setTimeout(() => overlay.classList.add("hidden"), 300);
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  if (menuBtn) menuBtn.addEventListener("click", openMenu);
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+  if (overlay) overlay.addEventListener("click", closeMenu);
+
+  // Link click hote hi drawer automatically close ho jaye
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+}
+
+// Ensure execution after DOM loads
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjects();
+  initMobileMenu();
+});
