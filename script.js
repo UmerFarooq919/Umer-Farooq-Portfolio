@@ -109,3 +109,34 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   initMobileMenu();
 });
+
+// --- Typewriter Effect---
+function initTypewriter() {
+  const textElement = document.getElementById("typewriter-text");
+  const cursorElement = document.getElementById("cursor");
+  if (!textElement) return;
+
+  const fullText = "Hi, I'm Umer Farooq.";
+  let index = 0;
+  const typingSpeed = 80; 
+
+  function typeChar() {
+    if (index < fullText.length) {
+      textElement.textContent += fullText.charAt(index);
+      index++;
+      setTimeout(typeChar, typingSpeed);
+    } else {
+      setTimeout(() => {
+        if (cursorElement) cursorElement.classList.add("opacity-50");
+      }, 1000);
+    }
+  }
+
+  setTimeout(typeChar, 300);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjects();
+  if (typeof initMobileMenu === "function") initMobileMenu();
+  initTypewriter();
+});
